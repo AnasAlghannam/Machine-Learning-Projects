@@ -13,7 +13,7 @@ An LLM agent that lets non-technical users run data-science tasks through natura
 
 ## Setup
 ```bash
-pip install langchain langchain-groq python-dotenv pandas numpy matplotlib seaborn scikit-learn
+pip install langchain langchain-classic langchain-groq python-dotenv pandas numpy matplotlib seaborn scikit-learn
 ```
 
 Create a `.env` file (in this folder or a parent) with your Groq API key:
