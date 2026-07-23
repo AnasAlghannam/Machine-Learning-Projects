@@ -12,15 +12,32 @@ An introduction to **tool calling** with LangChain: define custom tools, bind th
 - Building an agent class that manages the tool-calling loop
 
 ## Setup
+
+Run this project inside its own virtual environment so its dependencies stay isolated from other projects.
+
 ```bash
-pip install langchain langchain-groq python-dotenv
+cd InteractiveLLMAgentWithTools
+python3 -m venv .venv
+source .venv/bin/activate            # Windows: .venv\Scripts\activate
+pip install --upgrade pip
+pip install langchain langchain-groq python-dotenv jupyter ipykernel
 ```
 
-Create a `.env` file (in this folder or a parent) with your Groq API key:
+Register the environment as a Jupyter kernel, then launch the notebook:
+
+```bash
+python -m ipykernel install --user --name InteractiveLLMAgentWithTools --display-name "Python (InteractiveLLMAgentWithTools)"
+jupyter notebook "InteractiveLLMAgentWithTools.ipynb"
+```
+
+In the notebook, choose **Kernel → Change kernel → Python (InteractiveLLMAgentWithTools)**. Run `deactivate` when you're finished.
+
+### API keys
+
+This project calls Groq. Create a `.env` file in this folder (or the repo root — it is discovered automatically) with:
+
 ```
 GROQ_API_KEY=your_key_here
 ```
-Get a free key at [console.groq.com](https://console.groq.com/keys). Then run:
-```bash
-jupyter notebook "InteractiveLLMAgentWithTools.ipynb"
-```
+
+Get keys at: [console.groq.com/keys](https://console.groq.com/keys). `.env` is git-ignored — never commit it.

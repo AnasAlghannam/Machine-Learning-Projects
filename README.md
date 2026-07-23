@@ -59,11 +59,23 @@ used, and how to run it.
 
 ## Getting started
 
-Each project is independent. Open a project folder, read its `README.md`, install the listed
-dependencies, and run the notebook:
+Each project is independent and is meant to run in its **own virtual environment**, so their
+dependencies never collide. Every project's `README.md` has the exact commands, but the pattern is:
 
 ```bash
-jupyter notebook
+cd <ProjectFolder>
+python3 -m venv .venv
+source .venv/bin/activate            # Windows: .venv\Scripts\activate
+pip install --upgrade pip
+pip install <that project's dependencies> jupyter ipykernel
+python -m ipykernel install --user --name <ProjectFolder> --display-name "Python (<ProjectFolder>)"
+jupyter notebook "<ProjectFolder>.ipynb"      # then pick the matching kernel
 ```
 
-The LLM-agent projects share a single `.env` at the repo root (or a parent folder) for API keys.
+> Prefer a per-project venv over base Anaconda — the crewAI projects in particular can break
+> Anaconda's `protobuf` if installed into the base environment.
+
+**API keys.** The LLM/agent projects read keys from a `.env` file (this repo's root works for all of
+them, since it's discovered automatically). Copy [`.env.example`](.env.example) to `.env` and fill in
+what you need: `GROQ_API_KEY` (all agent projects), `SERPER_API_KEY` (crewAI web-search projects),
+`OPENWEATHER_API_KEY` (Weather project). `.env` is git-ignored — never commit it.

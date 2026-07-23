@@ -11,7 +11,22 @@ Builds and trains a Convolutional Neural Network to classify anime images into c
 - Training/validation split & evaluation
 
 ## Setup
+
+Run this project inside its own virtual environment so its dependencies stay isolated from other projects.
+
 ```bash
-pip install torch torchvision matplotlib pillow
+cd AnimeImageClassificationCNN
+python3 -m venv .venv
+source .venv/bin/activate            # Windows: .venv\Scripts\activate
+pip install --upgrade pip
+pip install torch torchvision matplotlib pillow jupyter ipykernel
 ```
-Run the notebook: `jupyter notebook "AnimeImageClassificationCNN.ipynb"`
+
+Register the environment as a Jupyter kernel, then launch the notebook:
+
+```bash
+python -m ipykernel install --user --name AnimeImageClassificationCNN --display-name "Python (AnimeImageClassificationCNN)"
+jupyter notebook "AnimeImageClassificationCNN.ipynb"
+```
+
+In the notebook, choose **Kernel → Change kernel → Python (AnimeImageClassificationCNN)**. Run `deactivate` when you're finished.

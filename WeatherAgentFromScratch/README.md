@@ -12,15 +12,32 @@ AI agents built from scratch in pure Python: a Weather AI Agent that fetches rea
 - Shared memory and query routing between agents
 
 ## Setup
+
+Run this project inside its own virtual environment so its dependencies stay isolated from other projects.
+
 ```bash
-pip install nltk PyPDF2 scikit-learn requests numpy python-dotenv
+cd WeatherAgentFromScratch
+python3 -m venv .venv
+source .venv/bin/activate            # Windows: .venv\Scripts\activate
+pip install --upgrade pip
+pip install nltk PyPDF2 scikit-learn requests numpy python-dotenv jupyter ipykernel
 ```
 
-Create a `.env` file (in this folder or a parent) with your OpenWeather API key:
+Register the environment as a Jupyter kernel, then launch the notebook:
+
+```bash
+python -m ipykernel install --user --name WeatherAgentFromScratch --display-name "Python (WeatherAgentFromScratch)"
+jupyter notebook "WeatherAgentFromScratch.ipynb"
+```
+
+In the notebook, choose **Kernel → Change kernel → Python (WeatherAgentFromScratch)**. Run `deactivate` when you're finished.
+
+### API keys
+
+This project calls OpenWeather. Create a `.env` file in this folder (or the repo root — it is discovered automatically) with:
+
 ```
 OPENWEATHER_API_KEY=your_key_here
 ```
-Get a free key at [openweathermap.org](https://home.openweathermap.org/api_keys). Then run:
-```bash
-jupyter notebook "WeatherAgentFromScratch.ipynb"
-```
+
+Get keys at: [openweathermap.org/api_keys](https://home.openweathermap.org/api_keys). `.env` is git-ignored — never commit it.

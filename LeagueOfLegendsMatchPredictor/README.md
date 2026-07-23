@@ -15,7 +15,22 @@ Predicts match outcomes in League of Legends using match statistics and a neural
 `league_of_legends_data_large.csv`
 
 ## Setup
+
+Run this project inside its own virtual environment so its dependencies stay isolated from other projects.
+
 ```bash
-pip install torch pandas numpy scikit-learn matplotlib
+cd LeagueOfLegendsMatchPredictor
+python3 -m venv .venv
+source .venv/bin/activate            # Windows: .venv\Scripts\activate
+pip install --upgrade pip
+pip install torch pandas numpy scikit-learn matplotlib jupyter ipykernel
 ```
-Run the notebook: `jupyter notebook "LeagueOfLegendsMatchPredictor.ipynb"`
+
+Register the environment as a Jupyter kernel, then launch the notebook:
+
+```bash
+python -m ipykernel install --user --name LeagueOfLegendsMatchPredictor --display-name "Python (LeagueOfLegendsMatchPredictor)"
+jupyter notebook "LeagueOfLegendsMatchPredictor.ipynb"
+```
+
+In the notebook, choose **Kernel → Change kernel → Python (LeagueOfLegendsMatchPredictor)**. Run `deactivate` when you're finished.

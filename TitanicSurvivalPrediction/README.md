@@ -15,7 +15,22 @@ Predicts passenger survival on the Titanic using ensemble classifiers and pipeli
 Titanic Survival Dataset
 
 ## Setup
+
+Run this project inside its own virtual environment so its dependencies stay isolated from other projects.
+
 ```bash
-pip install pandas numpy scikit-learn matplotlib seaborn
+cd TitanicSurvivalPrediction
+python3 -m venv .venv
+source .venv/bin/activate            # Windows: .venv\Scripts\activate
+pip install --upgrade pip
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter ipykernel
 ```
-Run the notebook: `jupyter notebook "TitanicSurvivalPrediction.ipynb"`
+
+Register the environment as a Jupyter kernel, then launch the notebook:
+
+```bash
+python -m ipykernel install --user --name TitanicSurvivalPrediction --display-name "Python (TitanicSurvivalPrediction)"
+jupyter notebook "TitanicSurvivalPrediction.ipynb"
+```
+
+In the notebook, choose **Kernel → Change kernel → Python (TitanicSurvivalPrediction)**. Run `deactivate` when you're finished.

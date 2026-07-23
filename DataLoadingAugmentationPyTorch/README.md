@@ -12,7 +12,22 @@ Implements PyTorch data pipelines using custom `Dataset` classes, `ImageFolder`,
 - Augmentation & performance comparison
 
 ## Setup
+
+Run this project inside its own virtual environment so its dependencies stay isolated from other projects.
+
 ```bash
-pip install torch torchvision matplotlib pillow
+cd DataLoadingAugmentationPyTorch
+python3 -m venv .venv
+source .venv/bin/activate            # Windows: .venv\Scripts\activate
+pip install --upgrade pip
+pip install torch torchvision matplotlib pillow jupyter ipykernel
 ```
-Run the notebook: `jupyter notebook "DataLoadingAugmentationPyTorch.ipynb"`
+
+Register the environment as a Jupyter kernel, then launch the notebook:
+
+```bash
+python -m ipykernel install --user --name DataLoadingAugmentationPyTorch --display-name "Python (DataLoadingAugmentationPyTorch)"
+jupyter notebook "DataLoadingAugmentationPyTorch.ipynb"
+```
+
+In the notebook, choose **Kernel → Change kernel → Python (DataLoadingAugmentationPyTorch)**. Run `deactivate` when you're finished.

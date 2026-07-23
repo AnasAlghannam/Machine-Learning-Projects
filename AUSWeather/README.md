@@ -15,7 +15,22 @@ Predicts whether it will rain tomorrow in Australia using the Australian Bureau 
 [Kaggle – Australian Weather Dataset](https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package)
 
 ## Setup
+
+Run this project inside its own virtual environment so its dependencies stay isolated from other projects.
+
 ```bash
-pip install pandas numpy scikit-learn matplotlib seaborn
+cd AUSWeather
+python3 -m venv .venv
+source .venv/bin/activate            # Windows: .venv\Scripts\activate
+pip install --upgrade pip
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter ipykernel
 ```
-Run the notebook: `jupyter notebook "AUSWeather.ipynb"`
+
+Register the environment as a Jupyter kernel, then launch the notebook:
+
+```bash
+python -m ipykernel install --user --name AUSWeather --display-name "Python (AUSWeather)"
+jupyter notebook "AUSWeather.ipynb"
+```
+
+In the notebook, choose **Kernel → Change kernel → Python (AUSWeather)**. Run `deactivate` when you're finished.
