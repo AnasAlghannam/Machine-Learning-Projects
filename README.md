@@ -18,6 +18,7 @@ used, and how to run it.
 | [LLMDataScienceAgentLCEL](LLMDataScienceAgentLCEL/) | DataWizard — an agent that runs data-science tasks (load, summarize, model) over CSVs through natural language. |
 | [TextToChartVisualizationAgent](TextToChartVisualizationAgent/) | Ask questions about a CSV in plain English and get answers plus generated charts, via a pandas dataframe agent. |
 | [LangGraphStatefulWorkflows](LangGraphStatefulWorkflows/) | Stateful, graph-based AI workflows with LangGraph (auth, Q&A, and a cyclical counter). |
+| [ReflectionAgentLangGraph](ReflectionAgentLangGraph/) | A self-improving reflection agent that drafts, critiques its own output, and rewrites it over several passes. |
 | [AutomateEventPlanning](AutomateEventPlanning/) | crewAI multi-agent event planning: venue, logistics, and marketing agents. |
 | [TailorJobApplicationsCrew](TailorJobApplicationsCrew/) | crewAI crew that tailors a resume to a job posting and preps interview talking points. |
 | [ResearchAndWriteArticle](ResearchAndWriteArticle/) | crewAI planner → writer → editor crew that researches a topic and writes an article. |
