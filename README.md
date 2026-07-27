@@ -19,6 +19,7 @@ used, and how to run it.
 | [TextToChartVisualizationAgent](TextToChartVisualizationAgent/) | Ask questions about a CSV in plain English and get answers plus generated charts, via a pandas dataframe agent. |
 | [LangGraphStatefulWorkflows](LangGraphStatefulWorkflows/) | Stateful, graph-based AI workflows with LangGraph (auth, Q&A, and a cyclical counter). |
 | [ReflectionAgentLangGraph](ReflectionAgentLangGraph/) | A self-improving reflection agent that drafts, critiques its own output, and rewrites it over several passes. |
+| [ReflexionAgentExternalKnowledge](ReflexionAgentExternalKnowledge/) | A Reflexion research agent that critiques its own answer, searches the web for evidence, and revises with real citations. |
 | [AutomateEventPlanning](AutomateEventPlanning/) | crewAI multi-agent event planning: venue, logistics, and marketing agents. |
 | [TailorJobApplicationsCrew](TailorJobApplicationsCrew/) | crewAI crew that tailors a resume to a job posting and preps interview talking points. |
 | [ResearchAndWriteArticle](ResearchAndWriteArticle/) | crewAI planner → writer → editor crew that researches a topic and writes an article. |
