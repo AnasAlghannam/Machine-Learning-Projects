@@ -13,3 +13,15 @@ venv/
 
 # OS / editor
 .DS_Store
+.vscode/
+.idea/
+
+# Tooling (machine-local settings; shared .claude/settings.json stays tracked)
+.claude/settings.local.json
+.claude/worktrees/
+
+# Data downloaded by the notebooks at runtime
+*.tar
+images_dataSAT/
+The-Daily-Dish-FAQ.pdf
+*-dataset.csv
