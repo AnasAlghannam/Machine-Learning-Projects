@@ -23,5 +23,7 @@ venv/
 # Data downloaded by the notebooks at runtime
 *.tar
 images_dataSAT/
-The-Daily-Dish-FAQ.pdf
 *-dataset.csv
+# The FAQ that WeatherAgentFromScratch downloads at runtime, but which
+# CrewAIAgentVsTaskTools ships as a project file.
+/WeatherAgentFromScratch/The-Daily-Dish-FAQ.pdf

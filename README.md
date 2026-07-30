@@ -27,6 +27,9 @@ used, and how to run it.
 | [MultiAgentFinancialAnalysis](MultiAgentFinancialAnalysis/) | Hierarchical crewAI system for stock analysis, strategy, execution, and risk. |
 | [MultiAgentCustomerSupport](MultiAgentCustomerSupport/) | crewAI support + quality-assurance agents that answer and review customer inquiries. |
 | [CustomerOutreachTools](CustomerOutreachTools/) | crewAI outreach crew showing built-in and custom tools (search + sentiment analysis). |
+| [CrewAIMultiAgentBasics](CrewAIMultiAgentBasics/) | crewAI fundamentals — agents, tasks, crews and tools — building a research-to-article pipeline. |
+| [CrewAIAgentVsTaskTools](CrewAIAgentVsTaskTools/) | Agent-centric vs. task-centric tool attachment, compared side by side on one FAQ chatbot. |
+| [CrewAIMealGroceryPlanner](CrewAIMealGroceryPlanner/) | Four-agent meal and grocery planner returning Pydantic-typed structured output. |
 | [WeatherAgentFromScratch](WeatherAgentFromScratch/) | AI agents built from scratch in pure Python: a weather agent and a PDF-RAG chatbot. |
 
 > The agent notebooks call LLMs through [Groq](https://console.groq.com/). Create a `.env` file
