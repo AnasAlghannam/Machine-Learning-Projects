@@ -27,6 +27,11 @@ used, and how to run it.
 | [MultiAgentFinancialAnalysis](MultiAgentFinancialAnalysis/) | Hierarchical crewAI system for stock analysis, strategy, execution, and risk. |
 | [MultiAgentCustomerSupport](MultiAgentCustomerSupport/) | crewAI support + quality-assurance agents that answer and review customer inquiries. |
 | [CustomerOutreachTools](CustomerOutreachTools/) | crewAI outreach crew showing built-in and custom tools (search + sentiment analysis). |
+| [RestaurantDataStructuring](RestaurantDataStructuring/) | Turns unstructured restaurant write-ups into validated JSON, with an LLM repair loop for records that fail the schema. |
+| [MultimodalDataProcessing](MultimodalDataProcessing/) | Captions food and review images with a vision model and folds them into existing JSON records. |
+| [MultimodalVectorIndex](MultimodalVectorIndex/) | Builds a searchable index over two modalities: sentence-transformer text vectors and CLIP image vectors in Chroma. |
+| [SimilarityRetrievalFiltering](SimilarityRetrievalFiltering/) | Text→text, filtered, and image→image retrieval over the multimodal index. |
+| [MultimodalFusionRanking](MultimodalFusionRanking/) | Blends text and image similarity into one ranked list with tunable per-modality weights. |
 | [CrewAIMultiAgentBasics](CrewAIMultiAgentBasics/) | crewAI fundamentals — agents, tasks, crews and tools — building a research-to-article pipeline. |
 | [CrewAIAgentVsTaskTools](CrewAIAgentVsTaskTools/) | Agent-centric vs. task-centric tool attachment, compared side by side on one FAQ chatbot. |
 | [CrewAIMealGroceryPlanner](CrewAIMealGroceryPlanner/) | Four-agent meal and grocery planner returning Pydantic-typed structured output. |
