@@ -42,6 +42,20 @@ used, and how to run it.
 > `python-dotenv`. Some crewAI projects also need `SERPER_API_KEY` (web search), and the weather
 > project needs `OPENWEATHER_API_KEY`. See each project's README for details.
 
+### Switching model provider
+
+Every project reads its key from `.env`. Two providers are supported, and both speak the OpenAI
+protocol, so switching is a matter of which key is present:
+
+| Set this | Effect |
+|---|---|
+| `GROQ_API_KEY` | Default. Fast and free, but the free tier has a tight rate limit. |
+| `OPENROUTER_API_KEY` | Takes priority when set. Fronts many models behind one key — useful when Groq's quota runs out, or when you need a model Groq does not host (vision models, for instance). |
+
+Set `OPENROUTER_MODEL` to pick the model, e.g. `meta-llama/llama-3.3-70b-instruct`. Projects with a
+central config module switch automatically; the rest name their model inline and take a one-line
+edit.
+
 ---
 
 ## Deep Learning & Computer Vision
